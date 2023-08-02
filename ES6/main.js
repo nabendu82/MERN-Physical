@@ -106,7 +106,87 @@ const developer = {
 
 const {firstName, lastName, country} = developer;
 
-console.log(firstName, lastName, country);
+// console.log(firstName, lastName, country);
+
+//Classes
+class CreateRoom {
+    constructor(name) {
+        this.room = `${name}'s room`
+    }
+
+    cleanRoom(soap){
+        console.log(`Cleaning ${this.room} with ${soap}`);
+    }
+}
+
+const nabsRoom = new CreateRoom("Nabendu");
+const shikhaRoom = new CreateRoom("Shikha");
+
+nabsRoom.cleanRoom('Domex');
+shikhaRoom.cleanRoom('Lizol');
+
+//Classical for loop
+let dev = ['Nabendu', 'Hari', 'Rajeev'];
+// for(let i=0; i<dev.length; i++){
+//     console.log(dev[i])
+// }
+
+//forEach
+dev.forEach(it => console.log(it));
+
+//Map use case
+let numbers = [6, 8, 10, 12];
+
+let doubledNums = [];
+
+for(let i=0; i<numbers.length; i++){
+    doubledNums.push(numbers[i] * 2)
+}
+
+// console.log(doubledNums);
+
+let doubled = numbers.map(num => num * 2);
+console.log(doubled);
+
+//Filter use case
+let posts = [
+    {
+        "id": 1,
+        "title": "sunt aut facere repellat provident occaecati excepturi",
+        "category": "technical",
+        "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem"
+    },
+    {
+        "id": 2,
+        "title": "qui est esse",
+        "category": "technical",
+        "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+        "id": 3,
+        "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+        "category": "fiction",
+        "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro"
+    }
+]
+
+let filtered = [];
+
+for(let i=0; i<posts.length; i++){
+    if(posts[i].category === 'technical'){
+        filtered.push(posts[i])
+    }
+}
+
+// console.log(filtered);
+
+let filteredES6 = posts.filter(item => item.category === 'fiction');
+console.log(filteredES6)
+
+
+
+
+
 
 
 
