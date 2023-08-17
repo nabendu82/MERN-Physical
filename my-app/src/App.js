@@ -1,10 +1,10 @@
 import './App.css';
-import ListPost from './components/ListPost';
+import LifeCycle from './components/LifeCycle';
 
 function App() {
   return (
     <div className="App">
-      <ListPost />
+      <LifeCycle />
     </div>
   );
 }
