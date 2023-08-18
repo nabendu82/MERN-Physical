@@ -1,10 +1,13 @@
 import './App.css';
-import LifeCycle from './components/LifeCycle';
+import GrandParent from './components/GrandParent';
+import { UserProvider } from './components/userContext';
 
 function App() {
   return (
     <div className="App">
-      <LifeCycle />
+      <UserProvider value="Nabendu">
+        <GrandParent />
+      </UserProvider>
     </div>
   );
 }
